@@ -2,53 +2,143 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technik Empfehlungen</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
+        * {
+            box-sizing: border-box;
         }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
         h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin: 15px 0 10px;
             color: #333;
         }
-        .produkt {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        .card p {
+            flex-grow: 1;
+            font-size: 0.95rem;
+            color: #555;
         }
-        .produkt img {
-            max-width: 200px;
+
+        .price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #007600;
+            margin: 10px 0;
         }
-        .produkt a {
+
+        .card a {
             display: inline-block;
-            margin-top: 10px;
-            color: white;
             background-color: #ff9900;
+            color: white;
             padding: 10px 15px;
+            text-align: center;
             text-decoration: none;
             border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #ccc;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <h1>Meine Technik-Empfehlungen</h1>
 
-    <div class="produkt">
-        <h2>Produkt 1: Beispielgerät</h2>
-        <img src="https://via.placeholder.com/200" alt="Produktbild">
-        <p>Beschreibung des Produkts. Warum ist es gut? Was macht es besonders?</p>
-        <a href="DEIN-AMAZON-AFFILIATE-LINK" target="_blank">Zum Produkt auf Amazon</a>
+    <header>
+        <h1>Technik-Empfehlungen 2025</h1>
+        <p>Die besten Produkte aus Elektronik, Smart Home & mehr</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Produkt 1 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Produktbild 1">
+            <h2>Wireless Kopfhörer XYZ</h2>
+            <p>Hervorragender Sound, lange Akkulaufzeit und bequemer Sitz. Ideal für unterwegs.</p>
+            <div class="price">€89,99</div>
+            <a href="https://www.amazon.de/dein-affiliate-link-1" target="_blank">Jetzt kaufen</a>
+        </div>
+
+        <!-- Produkt 2 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Produktbild 2">
+            <h2>Smartwatch ABC</h2>
+            <p>Fitness-Tracking, Herzfrequenzmessung und Nachrichtenanzeige – alles am Handgelenk.</p>
+            <div class="price">€149,00</div>
+            <a href="https://www.amazon.de/dein-affiliate-link-2" target="_blank">Zum Angebot</a>
+        </div>
+
+        <!-- Produkt 3 -->
+        <div class="card">
+            <img src="https://via.placeholder.com/400x250" alt="Produktbild 3">
+            <h2>Bluetooth Lautsprecher</h2>
+            <p>Starker Bass, wasserfest und mit 12 Stunden Akkulaufzeit. Perfekt für Partys.</p>
+            <div class="price">€59,95</div>
+            <a href="https://www.amazon.de/dein-affiliate-link-3" target="_blank">Produkt ansehen</a>
+        </div>
+
+        <!-- Du kannst weitere Produkte hier einfügen -->
+
     </div>
 
-    <div class="produkt">
-        <h2>Produkt 2: Anderes Gerät</h2>
-        <img src="https://via.placeholder.com/200" alt="Produktbild">
-        <p>Kurze Beschreibung oder Empfehlung zu diesem Produkt.</p>
-        <a href="DEIN-ZWEITER-LINK" target="_blank">Jetzt kaufen</a>
-    </div>
+    <footer>
+        © 2025 Technik Empfehlungen – Partnerlinks führen zu Amazon.de
+    </footer>
 
 </body>
 </html>
